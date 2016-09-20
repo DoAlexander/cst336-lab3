@@ -1,9 +1,12 @@
 <?php
 
-include 'LEDBoard/ledLetters.php';
+include 'silverjack.php';
 
-function LED($letter){
-    drawLetter($letter,"blue");
+
+
+function printer() {
+    $myDeck = new deck();
+    $myDeck->getDeck();
 }
 
 
@@ -24,12 +27,8 @@ function LED($letter){
                 <a href="../index.html">Main Page</a>
         </nav>
         <main>
-            <div class="LED">
-                <?=LED("C")?>
-                <?=LED("C")?>
-            </div>
-            <div class="LED">
-                <?=LED("C")?>
+            <div>
+                <?=printer()?>
             </div>
         </main>
         <footer>

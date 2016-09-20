@@ -10,28 +10,32 @@ class card {
     }
     
     function getSuit() {
-        return $suit;
+        return $this->suit;
     }
     
     function getCost() {
-        return $cost;
+        return $this->cost;
     }
     
 }
 
 class deck {
-    private $cards;
+    private $cards = [];
     
     function __construct() {
         for($i = 0; $i < 4; $i++) {
             for($y = 0; $y < 13; $y++) {
-                $temp = new card($i, $y);
+                $this->cards[] = new card($i, $y);
+                
             }
         }
     }
     
     function getDeck() {
-        print_r($cards);
+        foreach($this->cards as $card) {
+            echo($card->getSuit());
+        }
+        
     }
 }
 
