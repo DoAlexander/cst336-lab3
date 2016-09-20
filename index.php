@@ -2,7 +2,10 @@
 
 include 'silverjack.php';
 
-
+    /* This returns an associative array with the first index as the name of the picture, and second with the name associated with the picture */
+function getPlayerArray(){
+    return array("Chang.jpg"=>"Chang", "Heath.jpg"=>"Heath", "Jeff.jpg"=>"Jeff", "Tupac.jpg"=>"Tupac");
+}
 
 function printer() {
     $myDeck = new deck();
