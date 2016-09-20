@@ -19,6 +19,9 @@ nav {
     float: center;
 }
 
+td {
+    text-align:center;
+}
 main {
     background: rgb(255, 255, 255);
     background: rgba(255, 255, 255, .8);
