@@ -20,7 +20,7 @@ class card {
 }
 
 class deck {
-    private $suits = [];
+    private $suits = array('clubs', 'diamonds', 'hearts', 'spades');
     private $cards = [];
     
     public function __construct() {
@@ -30,17 +30,12 @@ class deck {
                 
             }
         }
-        array_push($this->suits, 'clubs', 'diamonds', 'hearts', 'spades');
     }
     
     public function getDeck() {
         echo('<table>');
         foreach($this->cards as $card) {
-            echo($card->getSuit());
-            echo('<tr><img id="statImage" src="./img/cards/');
-            echo($suits[$card->getSuit()]);
-            echo('/'.($card->getCost()+1).'.png" id="" ></img>');
-            echo('</tr>');
+            echo('<tr><img src="./img/cards/'.$this->suits[$card->getSuit()].'/'.($card->getCost()+1).'.png" id="" ></img></tr>');
         }
         echo('</table>');
         
