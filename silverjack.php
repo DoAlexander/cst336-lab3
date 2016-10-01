@@ -26,7 +26,7 @@ class deck {
     public function __construct() {
         for($i = 0; $i < 4; $i++) {
             for($y = 0; $y < 13; $y++) {
-                $this->cards[] = new card($i, $y);
+                $this->cards[] = new card($this->suits[$i], $y);
                 
             }
         }
@@ -36,10 +36,14 @@ class deck {
         shuffle($this->cards);
     }
     
+    public function dealCard() {
+        return array_pop($this->cards);
+    }
+    
     public function getDeck() {
         echo('<table>');
         for($i = 0; $i < sizeof($this->cards); $i++) {
-            echo('<tr><td><img src="./img/cards/'.$this->suits[$this->cards[$i]->getSuit()].'/'.($this->cards[$i]->getCost()+1).'.png" ></img></td></tr>');
+            echo('<tr><td><img src="./img/cards/'. $this->cards[$i]->getSuit().'/'.($this->cards[$i]->getCost()+1).'.png" ></img></td></tr>');
         }
         /*foreach($this->cards as $card) {
             echo('<tr><img src="./img/cards/'.$this->suits[$card->getSuit()].'/'.($card->getCost()+1).'.png" id="" ></img></tr>');

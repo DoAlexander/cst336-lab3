@@ -11,16 +11,31 @@ function getPlayerArray(){
 
 function playSilverjack() {
     $myDeck = new deck();
-    
+    $myDeck->shuffler();
     $playerArray = getPlayerArray();
     echo('<table>');
+    $winner = "";
+    $winnerD = 0;
     for($i = 0; $i < 4; $i++) {
+        $dealt = 0;
         echo('<tr>');
-        echo('<td>'.'<img src="./img/players/'.$playerArray[$i].'.jpg" ></img><br>'.$playerArray[$i].'<td>');
+        echo('<td>'.'<img src="./img/players/'.$playerArray[$i].'.jpg" ></img><br>'.$playerArray[$i].'</td>');
         //Add in card dealing here
+        while($dealt < 36) {
+            $currCard = $myDeck->dealCard();
+            echo('<td><img src="./img/cards/'.$currCard->getSuit().'/'.($currCard->getCost()+1).'.png" ></img></td>');
+            $dealt += $currCard->getCost();
+        }
+        echo('<td>'.$dealt.'</td>');
+        if($dealt <= 42 && $dealt > $winnerD) {
+            $winner = $playerArray[$i];
+            $winnerD = $dealt;
+        }
         echo('</tr>');
         
     }
+    echo('<tr><td>'.$winner.' wins '.$winnerD.' points!</td></tr>');
+    echo('<tr><td><a href="./index.php">Play Again</a></td></tr>');
     echo('</table>');
 }
 
