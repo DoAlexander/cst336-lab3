@@ -45,6 +45,7 @@ main {
     padding: 2.5% 5% 2.5% 5%;
     display:block;
     color: #c63b1b;
+    float:center;
 
 }
 
@@ -74,9 +75,9 @@ h3 {
 }
 
 table, tr, td{
-    border:2px solid black;
+    border:1px solid black;
     border-collapse: collapse;
-    padding:10px;
+    padding:8px;
 }
 
 #statImage {
