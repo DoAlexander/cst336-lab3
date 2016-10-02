@@ -51,11 +51,11 @@ function playSilverjack() {
     </head>
     <body >
         <header>
-            <h1 style="color=rgb(220,110,0);" id="title">Silverjack Game</h1>  
+            <h1 id="title">Silverjack Game</h1>  
             <h3 id="credit">by Doug, Erica, Tim</h3>
         </header>
         <nav>
-                <a href="https://cst336-perr5425.c9users.io/">Main Page</a>
+                <a href="../cst336-lab3/index.php">Main Page</a>
         </nav>
         <main>
             <div>
