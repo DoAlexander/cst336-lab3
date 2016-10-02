@@ -34,8 +34,8 @@ function playSilverjack() {
         echo('</tr>');
         
     }
-    echo('<tr><td>'.$winner.' wins '.$winnerD.' points!</td></tr>');
-    echo('<tr><td><a href="./index.php">Play Again</a></td></tr>');
+    echo('<tr><td colspan="100%">'.$winner.' wins '.$winnerD.' points!</td></tr>');
+    echo('<tr><td colspan="100%"><a href="./index.php">Play Again</a></td></tr>');
     echo('</table>');
 }
 
