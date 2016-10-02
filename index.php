@@ -6,7 +6,7 @@ include 'silverjack.php';
 
     /* This returns an associative array with the first index as the name of the picture, and second with the name associated with the picture */
 function getPlayerArray(){
-    return shuffle(array("Chang", "Heath", "Jeff", "Tupac"));
+    return (array("Chang", "Heath", "Jeff", "Tupac"));
 }
 
 function playSilverjack() {
