@@ -13,6 +13,7 @@ function playSilverjack() {
     $myDeck = new deck();
     $myDeck->shuffler();
     $playerArray = getPlayerArray();
+    shuffle($playerArray);
     echo('<table>');
     $winner = "";
     $winnerD = 0;
@@ -53,7 +54,7 @@ function playSilverjack() {
             <h1 style="color=rgb(220,110,0);" id="title">Silverjack Game</h1>    
         </header>
         <nav>
-                <a href="../index.html">Main Page</a>
+                <a href="https://cst336-perr5425.c9users.io/">Main Page</a>
         </nav>
         <main>
             <div>
