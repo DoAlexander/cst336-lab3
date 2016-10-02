@@ -7,7 +7,7 @@
 nav {
     width:100%;
     background-color:#000000;
-    padding: 10px;
+    padding: 15px;
     float: center;
 }
 
@@ -21,10 +21,11 @@ nav a {
     font-size: 20px;
     color:#000000;
     font-family:helvetica;
+    font-weight:bold;
 }
 
 nav a:hover{
-    color:red;
+    color:#c63b1b;
 }
 
 nav a:visited{
@@ -37,10 +38,10 @@ td {
 main {
     background: rgb(255, 255, 255);
     background: rgba(255, 255, 255, .8);
-    width:900px;
+    width:600px;
     margin: 3% auto 3% auto;
-    float:center;
-    font-size: 36px;
+    float:left;
+    font-size: 26px;
     padding: 2.5% 5% 2.5% 5%;
     display:block;
 
@@ -55,7 +56,7 @@ main {
 }
 
 a:hover {
-    color:#CCCC11;
+    color:#c63b1b;
 }
 
 header {
@@ -66,14 +67,18 @@ header {
     font-size:25px;
     font-family:helvetica;
 }
+h3 {
+    color:red;
+    font-size:12px;
+}
 
 table, tr, td{
-    border:2px solid black;
+    border:4px solid black;
 }
 
 #statImage {
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 350px;
+    max-height: 350px;
     
 }
 
