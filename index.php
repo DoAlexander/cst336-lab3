@@ -56,6 +56,7 @@ function playSilverjack() {
         </header>
         <nav>
                 <a href="../cst336-lab3/index.php">Main Page</a>
+                <a href="../cst336-lab3/credit.php">Credits</a>
         </nav>
         <main>
             <div>

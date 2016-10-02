@@ -35,6 +35,7 @@ nav a:visited{
 td {
     text-align:center;
 }
+
 main {
     background: rgb(255, 255, 255);
     background: rgba(255, 255, 255, .8);
@@ -45,7 +46,6 @@ main {
     padding: 2.5% 5% 2.5% 5%;
     display:block;
     color: #c63b1b;
-    float:center;
 
 }
 
@@ -83,7 +83,20 @@ header {
 table, tr, td{
     border:1px solid black;
     border-collapse: collapse;
-    padding:5px;
+    padding:10px;
+}
+h3 {
+    font-family:helvetica;
+}
+h5 {
+    font-family:helvetica;
+    font-size:20px;
+    color:#a1a1a1;
+}
+li {
+    color: black;
+    font-family:helvetica;
+    font-size:15px;
 }
 
 #statImage {
