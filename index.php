@@ -6,7 +6,9 @@ include 'silverjack.php';
 
     /* This returns an associative array with the first index as the name of the picture, and second with the name associated with the picture */
 function getPlayerArray(){
-    return (array("Chang", "Heath", "Jeff", "Tupac"));
+    $players = array("Chang", "Heath", "Jeff", "Tupac");
+    shuffle($players);
+    return $players;
 }
 
 function playSilverjack() {
@@ -17,6 +19,7 @@ function playSilverjack() {
     echo('<table>');
     $winner = "";
     $winnerD = 0;
+    $totalD = 0;
     for($i = 0; $i < 4; $i++) {
         $dealt = 0;
         echo('<tr>');
@@ -32,10 +35,11 @@ function playSilverjack() {
             $winner = $playerArray[$i];
             $winnerD = $dealt;
         }
+        $totalD += $dealt;
         echo('</tr>');
         
     }
-    echo('<tr><td colspan="75%">'.$winner.' wins '.$winnerD.' points!</td></tr>');
+    echo('<tr><td colspan="75%">'.$winner.' wins '.($totalD-$winnerD).' points!</td></tr>');
     echo('<tr><td colspan="75%"><a href="./index.php">Play Again</a></td></tr>');
     echo('</table>');
 }
